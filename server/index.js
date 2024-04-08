@@ -25,12 +25,7 @@ database.connect();
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
+app.use(cors({}));
 app.use(
   fileUpload({
     useTempFiles: true,
@@ -38,7 +33,6 @@ app.use(
   })
 );
 
-// Connecting to cloudinary
 cloudinaryConnect();
 
 // Setting up routes
