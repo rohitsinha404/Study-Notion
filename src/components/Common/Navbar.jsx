@@ -37,7 +37,6 @@ function Navbar() {
 
   const [subLinks, setSubLinks] = useState([]);
   const [loading, setLoading] = useState(false);
-  
 
   useEffect(() => {
     (async () => {
@@ -84,6 +83,7 @@ function Navbar() {
                       }`}
                     >
                       <p>{link.title}</p>
+
                       <BsChevronDown />
                       <div className="invisible absolute left-[50%] top-[50%] z-[1000] flex w-[200px] translate-x-[-50%] translate-y-[3em] flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-[1.65em] group-hover:opacity-100 lg:w-[300px]">
                         <div className="absolute left-[50%] top-0 -z-10 h-6 w-6 translate-x-[80%] translate-y-[-40%] rotate-45 select-none rounded bg-richblack-5"></div>
@@ -116,15 +116,26 @@ function Navbar() {
                   </>
                 ) : (
                   <Link to={link?.path}>
-                    <p
-                      className={`${
-                        matchRoute(link?.path)
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
-                      }`}
-                    >
-                      {link.title}
-                    </p>
+                    <div className="flex gap-2    items-center justify-center">
+                      {link.img !== null && (
+                        <img
+                          src={link.img}
+                          alt={link.title}
+                          width={30}
+                          height={30}
+                          className="animate-pulse invert "
+                        />
+                      )}
+                      <p
+                        className={`${
+                          matchRoute(link?.path)
+                            ? "text-yellow-25"
+                            : "text-richblack-25"
+                        }`}
+                      >
+                        {link.title}
+                      </p>
+                    </div>
                   </Link>
                 )}
               </li>

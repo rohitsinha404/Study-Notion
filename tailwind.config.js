@@ -127,9 +127,9 @@ module.exports = {
     extend: {
       maxWidth: {
         maxContent: "1260px",
-        maxContentTab: "650px"
+        maxContentTab: "650px",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
