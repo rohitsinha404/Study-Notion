@@ -2,7 +2,7 @@ Here's the revised README with the requested changes:
 
 ---
 
-# StudyNotion - EdTech Platform
+# StudyNotion  - EdTech Platform
 :rocket: [Link to website](https://study-notion-rohit.vercel.app/)
 
 ![image](https://github.com/user-attachments/assets/aa4aa12d-c0aa-4cf9-94c7-52389503e1ac)
